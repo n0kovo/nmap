@@ -102,7 +102,7 @@ local function scan(host, port, file)
   local status, data
 
   if not file then
-    status, data = comm.exchange(host, port, "SCAN /trinity/loves/nmap")
+    status, data = comm.exchange(host, port, "SCAN /facebookexternalhit/1.1")
     if not status then
       stdnse.debug1("Failed to send SCAN command:%s", data)
       return nil

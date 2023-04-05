@@ -79,7 +79,7 @@ action = function(host, port)
   local probe = {
     "OPTIONS icap://%s%s ICAP/1.0",
     "Host: %s",
-    "User-Agent: nmap icap-client/0.01",
+    "User-Agent: Java-ICAP-Client/1.1",
     "Encapsulated: null-body=0"
   }
   local hostname = stdnse.get_hostname(host)

@@ -40,7 +40,7 @@ local function authenticate(host, port, username, password)
 
   local headers = {
     "POST /login HTTP/1.1",
-    "User-Agent: Nmap",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
     ("Host: %s:%d"):format(host.ip, port.number),
     "Accept: */*",
     ("Content-Length: %d"):format(#post_data),

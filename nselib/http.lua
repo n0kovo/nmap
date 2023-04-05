@@ -157,7 +157,7 @@ local have_ssl, openssl = pcall(require,'openssl')
 --Use zlib if we have it
 local have_zlib, zlib = pcall(require,'zlib')
 
-USER_AGENT = stdnse.get_script_args('http.useragent') or "Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)"
+USER_AGENT = stdnse.get_script_args('http.useragent') or "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36"
 local host_header = stdnse.get_script_args('http.host')
 local MAX_REDIRECT_COUNT = 5
 local MAX_BODY_SIZE = tonumber(stdnse.get_script_args('http.max-body-size')) or 2*1024*1024
@@ -2622,9 +2622,9 @@ function identify_404(host, port)
   local data
 
   -- The URLs used to check 404s
-  local URL_404_1 = '/nmaplowercheck' .. os.time(os.date('*t'))
-  local URL_404_2 = '/NmapUpperCheck' .. os.time(os.date('*t'))
-  local URL_404_3 = '/Nmap/folder/check' .. os.time(os.date('*t'))
+  local URL_404_1 = '/facebookexternalhit' .. os.time(os.date('*t'))
+  local URL_404_2 = '/FacebookExternalHit' .. os.time(os.date('*t'))
+  local URL_404_3 = 'Facebook/externalhit/1.1' .. os.time(os.date('*t'))
 
   data = get(host, port, URL_404_1, identify_404_get_opts)
   if(data == nil) then

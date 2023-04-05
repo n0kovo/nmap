@@ -60,3 +60,4 @@ libz/configure.log
 !macosx/Makefile
 !mswin32/Makefile
 !zenmap/share/zenmap/locale/Makefile
+.DS_Store
